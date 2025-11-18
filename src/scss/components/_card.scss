@@ -1,15 +1,76 @@
 .card {
+  width: 559px;
+  height: 320px;
+  background: #fff;
+  border-radius: 30px;
+  border: 4px solid #E83F59;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.26);
+  padding: 19px 10px 2px 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  outline: none;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 35px rgba(0,0,0,0.38);
+    border-color: darken(#E83F59, 6%);
+  }
+
+  &__picture {
+    flex: 0 0 auto;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+
   &__body {
-    background: red;
-    border-radius: var(--border-radius-default);
-    padding: var(--padding-block) var(--padding-inline);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   &__title {
-    font-family: var(--font-family-title), sans-serif;
+    font-family: "Nasalization";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    color: #000;
+    margin: 30px 0 15px;
   }
 
   &__text {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+    color: #000;
+    margin-left: 0;
+    margin-bottom: auto;
+  }
 
+  &__btn {
+    margin-top: 18px;
+    align-self: flex-start;
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 2px solid #1D56F1;
+    background: #fff;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(29,86,241,0.12), 0 8px 35px rgba(0,0,0,0.38);
   }
 }

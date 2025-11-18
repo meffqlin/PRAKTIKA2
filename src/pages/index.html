@@ -23,6 +23,73 @@
 <!--"text": "Текст описания карточки 2"-->
 <!--})-->
 @@include("../components/_header_light.html")
+<main class="main">
+    <section class="hero-sputnik">
+        <div class="hero-sputnik__left">
+            <h1 class="hero-sputnik__title">Спутник</h1>
+            <p class="hero-sputnik__subtitle">Мы всегда рядом.</p>
+            @@include('../components/button.html')
+        </div>
 
+        <div class="hero-sputnik__right">
+            <p class="hero-sputnik__text">
+                Ведем ваш бренд по орбите успеха.<br>
+                Наша реклама достигает аудиторию<br>
+                мгновенно и надежно,на всех<br>
+                площадках — от онлайн-пространства <br>
+                до городской среды.
+            </p>
+        </div>
+    </section>
+    <section class="philosophy">
+        <h2 class="philosophy__title">Наша философия</h2>
+
+
+        <div class="philosophy__content">
+            <div class="philosophy__left">
+                <p class="philosophy__left-text">Всегда рядом<br> — в каждом канале<br> продвижения</p>
+            </div>
+
+
+            <div class="philosophy__right">
+                <p class="philosophy__right-text">
+                    Агентство «Спутник» стремится стать надежным партнером для вашего бренда, обеспечивающим постоянную связь с целевой аудиторией.
+                </p>
+                <p class="philosophy__right-text">
+                    Мы создаем рекламу, которая работает круглосуточно. От цифрового пространства до городских улиц — мы везде, где ваша целевая аудитория.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="priorities">
+        <h2 class="priorities__title">Почему именно Спутник?</h2>
+
+        <div class="priorities__list">
+            @@include('../components/_card.html', {
+            "img": "./assets/images/image13.webp",
+            "img-lg": "./assets/images/image13-lg.webp",
+            "img-sm": "./assets/images/image13-sm.webp",
+            "title": "Непрерывная поддержка",
+            "text": "Постоянно находимся на связи с вами и вашей аудиторией.",
+            })
+
+            @@include('../components/_card.html', {
+            "img": "./assets/images/image15.webp",
+            "img-lg": "./assets/images/image15-lg.webp",
+            "img-sm": "./assets/images/image15-sm.webp",
+            "title": "Стратегический охват",
+            "text": "Покрываем весь путь потребителя от знакомства до покупки.",
+            })
+
+            @@include('../components/_card.html', {
+            "img": "./assets/images/image17.webp",
+            "img-lg": "./assets/images/image17-lg.webp",
+            "img-sm": "./assets/images/image17-sm.webp",
+            "title": "Выигрышные маршруты",
+            "text": "Ведём бренд по оптимальной траектории роста и эффективности.",
+            })
+        </div>
+    </section>
+</main>
 </body>
 </html>

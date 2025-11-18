@@ -20,3 +20,165 @@
 body {
   background-color: var(--main-color);
 }
+
+.hero-sputnik {
+  display: flex;
+  justify-content: space-between;
+  padding: 132px 100px;
+  gap: 100px; // расстояние между левым блоком и правым текстом
+  align-items: flex-start;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; // расстояние между элементами, можно регулировать
+  }
+
+  &__title {
+    font-family: 'Nasalization', sans-serif;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 100%;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 100%;
+    margin: 0;
+  }
+
+
+  &__text {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 68px;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+.hero-sputnik {
+  display: flex;
+  justify-content: space-between;
+  padding: 132px 100px;
+  gap: 121px; // правильный гэп по макету
+  align-items: flex-start;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__right {
+    width: 955px;      // фиксируем ширину
+    height: 339px;     // можно оставить, но обычно необязательно
+  }
+
+  &__text {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 68px;
+    margin: 0;
+  }
+}
+.philosophy {
+  background: #B8132D;
+  width: 1920px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__title {
+    font-family: "Nasalization";
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 100%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;;
+  }
+
+
+  &__left {
+    margin-right: 212px;
+    margin-top: 210px;
+
+
+    &-text {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 55px;
+      line-height: 100%;
+      color: #fff;
+
+
+      br {
+        content: "";
+        display: block;
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+
+  &__right {
+    max-width: 900px;
+
+
+
+    &-text {
+      font-family: "Inter";
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 55px;
+      color: #fff;
+      margin-bottom: 50px;
+
+
+      &:last-child {
+        line-height: 50px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.priorities {
+  padding: 50px 100px;
+  background: #fff;
+  box-sizing: border-box;
+
+  &__title {
+    font-family: "Nasalization";
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 1;
+    color: #B8132D;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
