@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+.header_light {
+  width: 1720px;
+  background: #E83F59;
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 0;
+  height: 103px;
+  text-decoration: none;
+  .logo {
+    margin-top: 10px;
+    width: 81.99986267089844px;
+    height: 82.51484680175781px;
+  }
+  .navigation {
+    display: flex;
+    gap: 42px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-decoration: none;
+    margin-left: 60px;
+    margin-top: 37px;
+  }
+  .icons {
+    display: flex;
+    gap: 37px;
+    margin-top: 24px;
+    margin-left: 821px;
+  }
+}
