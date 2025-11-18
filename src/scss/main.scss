@@ -25,13 +25,13 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 132px 100px;
-  gap: 100px; // расстояние между левым блоком и правым текстом
+  gap: 100px;
   align-items: flex-start;
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 40px; // расстояние между элементами, можно регулировать
+    gap: 40px;
   }
 
   &__title {
@@ -65,7 +65,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 132px 100px;
-  gap: 121px; // правильный гэп по макету
+  gap: 121px;
   align-items: flex-start;
 
   &__left {
@@ -75,8 +75,8 @@ body {
   }
 
   &__right {
-    width: 955px;      // фиксируем ширину
-    height: 339px;     // можно оставить, но обычно необязательно
+    width: 955px;
+    height: 339px;
   }
 
   &__text {
