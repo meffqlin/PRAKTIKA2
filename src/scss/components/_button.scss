@@ -9,6 +9,8 @@
   justify-content: center;
   cursor: pointer;
   border: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 
   span {
     font-family: Inter, sans-serif;
@@ -16,5 +18,86 @@
     font-size: 40px;
     line-height: 100%;
     color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    background: #ff5872;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(232, 63, 89, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // ===== TABLET STYLES (768–1279px) =====
+  @media (max-width: 1279px) {
+    width: 100%;
+    max-width: 500px;
+    height: 90px;
+    border-radius: 25px;
+
+    span {
+      font-size: 34px;
+    }
+  }
+
+  // ===== MOBILE STYLES (≤767px) =====
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 400px;
+    height: 75px;
+    border-radius: 20px;
+    padding: 8px;
+
+    span {
+      font-size: 28px;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(232, 63, 89, 0.3);
+    }
+  }
+
+  // ===== SMALL MOBILE STYLES (≤480px) =====
+  @media (max-width: 480px) {
+    height: 65px;
+    max-width: 350px;
+    border-radius: 15px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  // ===== EXTRA SMALL MOBILE STYLES (≤350px) =====
+  @media (max-width: 350px) {
+    height: 55px;
+    max-width: 280px;
+    padding: 6px;
+
+    span {
+      font-size: 20px;
+      white-space: normal; // Разрешаем перенос на очень маленьких экранах
+      line-height: 1.1;
+    }
+  }
+}
+
+// Контейнер для кнопки (рекомендуется для центрирования)
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
   }
 }

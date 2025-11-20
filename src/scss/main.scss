@@ -19,15 +19,22 @@
 @use 'components/checkbox-option';
 @use 'components/input-field';
 @use "components/textarea-field";
+@use "components/_footer";
 
 ::-webkit-scrollbar {
   width: 0;
 }
-* { margin: 0; }
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--main-color);
 }
 
+// ===== HERO SPUTNIK SECTION =====
 .hero-sputnik {
   display: flex;
   justify-content: space-between;
@@ -39,6 +46,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    flex: 1;
+  }
+
+  &__right {
+    flex: 1;
+    max-width: 955px;
+    height: 339px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
   &__title {
@@ -47,6 +67,7 @@ body {
     font-size: 110px;
     line-height: 100%;
     margin: 0;
+    color: black;
   }
 
   &__subtitle {
@@ -55,8 +76,8 @@ body {
     font-size: 48px;
     line-height: 100%;
     margin: 0;
+    color: black;
   }
-
 
   &__text {
     font-family: Inter, sans-serif;
@@ -65,45 +86,78 @@ body {
     line-height: 68px;
     margin: 0;
     white-space: nowrap;
+    color: black;
   }
-}
 
-.hero-sputnik {
-  display: flex;
-  justify-content: space-between;
-  padding: 132px 100px;
-  gap: 121px;
-  align-items: flex-start;
-
-  &__left {
-    display: flex;
+  // Tablet: 768–1279px
+  @media (max-width: 1279px) {
+    padding: 80px 60px;
+    gap: 60px;
     flex-direction: column;
+    align-items: center;
+
+    &__left {
+      align-items: center;
+      text-align: center;
+    }
+
+    &__right {
+      height: 250px;
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 80px;
+    }
+
+    &__subtitle {
+      font-size: 36px;
+    }
+
+    &__text {
+      font-size: 36px;
+      line-height: 50px;
+      white-space: normal;
+    }
+  }
+
+  // Mobile: ≤767px
+  @media (max-width: 767px) {
+    padding: 50px 20px;
     gap: 40px;
-  }
 
-  &__right {
-    width: 955px;
-    height: 339px;
-  }
+    &__left {
+      gap: 20px;
+    }
 
-  &__text {
-    font-family: Inter, sans-serif;
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 68px;
-    margin: 0;
+    &__right {
+      height: 180px;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 }
+
+// ===== PHILOSOPHY SECTION =====
 .philosophy {
   background: #B8132D;
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   padding: 50px 100px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   &__title {
     font-family: "Nasalization";
@@ -115,18 +169,16 @@ body {
     margin-bottom: 50px;
   }
 
-
   &__content {
     display: flex;
     justify-content: space-between;
-    gap: 75px;;
+    gap: 75px;
+    width: 100%;
   }
 
-
   &__left {
-    margin-right: 212px;
+    flex: 1;
     margin-top: 210px;
-
 
     &-text {
       font-family: "Montserrat";
@@ -134,7 +186,6 @@ body {
       font-size: 55px;
       line-height: 100%;
       color: #fff;
-
 
       br {
         content: "";
@@ -144,11 +195,9 @@ body {
     }
   }
 
-
   &__right {
+    flex: 1;
     max-width: 900px;
-
-
 
     &-text {
       font-family: "Inter";
@@ -158,18 +207,80 @@ body {
       color: #fff;
       margin-bottom: 50px;
 
-
       &:last-child {
         line-height: 50px;
         margin-bottom: 0;
       }
     }
   }
+
+  // Tablet: 768–1279px
+  @media (max-width: 1279px) {
+    padding: 40px 60px;
+
+    &__content {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__left {
+      margin-top: 0;
+      margin-right: 0;
+      text-align: center;
+
+      &-text {
+        font-size: 42px;
+
+        br {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &__right {
+      max-width: 100%;
+
+      &-text {
+        font-size: 36px;
+        line-height: 45px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // Mobile: ≤767px
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+
+    &__title {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+
+    &__left {
+      &-text {
+        font-size: 28px;
+
+        br {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__right {
+      &-text {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
+
+// ===== PRIORITIES SECTION =====
 .priorities {
   padding: 50px 100px;
   background: #fff;
-  box-sizing: border-box;
 
   &__title {
     font-family: "Nasalization";
@@ -186,13 +297,44 @@ body {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  // Tablet: 768–1279px
+  @media (max-width: 1279px) {
+    padding: 40px 60px;
+
+    &__title {
+      font-size: 56px;
+    }
+
+    &__list {
+      gap: 15px;
+    }
+  }
+
+  // Mobile: ≤767px
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+
+    &__title {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
+
+// ===== PROJECTS SECTION =====
 .projects {
   background: #B8132D;
   width: 100%;
   padding: 50px 100px;
-  box-sizing: border-box;
 
   &__title {
     font-family: "Nasalization";
@@ -226,40 +368,49 @@ body {
     display: flex;
     justify-content: center;
   }
-}
 
-@media (max-width: 1279px) {
-  .projects {
+  // Tablet: 768–1279px
+  @media (max-width: 1279px) {
     padding: 40px 60px;
+
+    &__title {
+      font-size: 56px;
+    }
+
+    &__subtitle {
+      font-size: 36px;
+    }
+
+    &__list {
+      gap: 30px;
+    }
   }
 
-  .project-card {
-    width: 100%;
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 767px) {
-  .projects {
+  // Mobile: ≤767px
+  @media (max-width: 767px) {
     padding: 30px 20px;
-  }
 
-  .projects__title {
-    font-size: 42px;
-  }
+    &__title {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
 
-  .projects__subtitle {
-    font-size: 26px;
-  }
+    &__subtitle {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
 
-  .project-card {
-    height: auto;
-  }
+    &__list {
+      gap: 20px;
+    }
 
-  .btn--small, .btn--big {
-    width: 100%;
+    &__footer {
+      margin-top: 30px;
+    }
   }
 }
+
+// ===== TRUST SECTION =====
 .trust {
   padding: 50px 100px 0;
   background: #FFFFFF;
@@ -276,6 +427,9 @@ body {
 
   &__content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__img {
@@ -286,7 +440,6 @@ body {
     object-fit: cover;
   }
 
-  /* 📌 Текст центрированный, но смещён ВПРАВО на 60px от головы */
   &__text {
     font-family: "Inter";
     font-size: 32px;
@@ -295,77 +448,118 @@ body {
     color: #1F2937;
     margin-top: -126px;
     max-width: 1100px;
-
-    /* главное смещение */
-    margin-left: 239px
+    margin-left: 239px;
   }
 
-  /* 📌 Автор стоит справа — от правой границы 100px */
   &__author {
     font-family: "Inter";
     font-size: 24px;
     font-weight: 600;
     text-align: right;
     margin-top: 40px;
-
-    /* держим 100px справа */
     margin-right: 100px;
+    align-self: flex-end;
   }
 
-  /* Полоска */
   &__line {
-    width: 1429px;
+    width: calc(100% - 300px);
     border-bottom: 1px solid #E83F59;
     margin-top: 50px;
     margin-left: 150px;
   }
-}
 
-/* 📱 Адаптив */
-@media (max-width: 1200px) {
-  .trust__line {
-    width: 100%;
+  // Tablet: 768–1279px
+  @media (max-width: 1279px) {
+    padding: 40px 60px 0;
+
+    &__title {
+      font-size: 56px;
+      margin-bottom: 60px;
+    }
+
+    &__img {
+      width: 120px;
+      height: 120px;
+      margin-top: -40px;
+    }
+
+    &__text {
+      font-size: 28px;
+      margin-top: -80px;
+      margin-left: 180px;
+      max-width: calc(100% - 200px);
+    }
+
+    &__author {
+      font-size: 20px;
+      margin-right: 60px;
+    }
+
+    &__line {
+      width: calc(100% - 120px);
+      margin-left: 60px;
+    }
+  }
+
+  // Mobile: ≤767px
+  @media (max-width: 767px) {
+    padding: 30px 20px 0;
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      align-items: center;
+    }
+
+    &__img {
+      width: 80px;
+      height: 80px;
+      margin-top: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__text {
+      font-size: 18px;
+      margin: 20px 0 0 0;
+      max-width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 0;
+    }
+
+    &__author {
+      font-size: 16px;
+      margin: 20px 0 0 0;
+      align-self: center;
+      text-align: center;
+    }
+
+    &__line {
+      width: 100%;
+      margin: 30px 0 0 0;
+    }
   }
 }
 
-@media (max-width: 768px) {
-  .trust {
-    padding: 40px 20px;
-  }
-
-  .trust__title {
-    font-size: 36px;
-  }
-
-  .trust__text {
-    font-size: 20px;
-    max-width: 100%;
-  }
-
-  .trust__img {
-    width: 120px;
-    height: 120px;
-    margin-top: -40px;
-  }
-
-  .trust__author {
-    font-size: 18px;
-  }
-}
+// ===== CONSULT SECTION =====
 .consult {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 50px 100px;
   background: #FFF;
 
-  .consult__title {
+  &__title {
     font-family: Nasalization;
     font-size: 70px;
     color: #B8132D;
     text-align: center;
   }
 
-  .consult__subtitle {
+  &__subtitle {
     margin-top: 50px;
     font-family: Inter;
     font-size: 45px;
@@ -414,27 +608,111 @@ body {
     justify-content: center;
     margin: 60px 0;
   }
-}
 
-/* ————————————— АДАПТИВ ————————————— */
+  // Tablet: 768–1279px
+  @media (max-width: 1279px) {
+    padding: 40px 60px;
 
-@media (max-width: 1600px) {
-  .consult {
-    transform: scale(.9);
-    transform-origin: top;
+    &__title {
+      font-size: 56px;
+    }
+
+    &__subtitle {
+      font-size: 36px;
+      margin-top: 40px;
+    }
+
+    &__content {
+      margin-top: 50px;
+      gap: 80px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    &__label {
+      font-size: 28px;
+    }
+
+    &__right .block__title {
+      font-size: 28px;
+    }
+
+    &__button {
+      margin: 40px 0;
+    }
+  }
+
+  // Mobile: ≤767px
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+
+    &__title {
+      font-size: 42px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    &__content {
+      margin-top: 30px;
+      gap: 40px;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+    }
+
+    &__label {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    &__right {
+      .block__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .block {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__button {
+      margin: 30px 0;
+    }
   }
 }
 
-@media (max-width: 1400px) {
-  .consult {
-    transform: scale(.8);
+// Utility classes for buttons
+.btn {
+  &--small, &--big {
+    width: 100%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 400px;
+    }
   }
 }
 
-@media (max-width: 1200px) {
-  .consult__content {
-    flex-direction: column;
-    align-items: center;
+// Project card adaptation
+.project-card {
+  @media (max-width: 1279px) {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  @media (max-width: 767px) {
+    height: auto;
   }
 }
-

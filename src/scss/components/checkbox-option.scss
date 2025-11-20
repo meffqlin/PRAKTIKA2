@@ -6,7 +6,9 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 
-  input { display: none; }
+  input {
+    display: none;
+  }
 
   .checkbox-dot {
     width: 50px;
@@ -16,6 +18,7 @@
     background: white;
     transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
     box-sizing: border-box;
+    flex-shrink: 0; // Предотвращает сжатие чекбокса
   }
 
   input:checked + .checkbox-dot {
@@ -30,6 +33,104 @@
     font-size: 24px;
     font-weight: 600;
     color: black;
-    line-height: 1;
+    line-height: 1.2; // Улучшенный line-height для лучшей читаемости
+    word-wrap: break-word; // Предотвращает выход текста за границы
+  }
+
+  // ===== TABLET STYLES (768–1279px) =====
+  @media (max-width: 1279px) {
+    margin-bottom: 40px;
+    gap: 10px;
+
+    .checkbox-dot {
+      width: 45px;
+      height: 45px;
+      border-width: 2.5px;
+    }
+
+    input:checked + .checkbox-dot {
+      border-width: 8px;
+    }
+
+    .checkbox-text {
+      font-size: 22px;
+      line-height: 1.3;
+    }
+  }
+
+  // ===== MOBILE STYLES (≤767px) =====
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+    gap: 8px;
+    align-items: flex-start; // Выравнивание по верху для многострочного текста
+
+    .checkbox-dot {
+      width: 40px;
+      height: 40px;
+      border-width: 2px;
+      margin-top: 2px; // Компенсация для выравнивания с текстом
+    }
+
+    input:checked + .checkbox-dot {
+      border-width: 7px;
+      transform: scale(1.01);
+    }
+
+    .checkbox-text {
+      font-size: 20px;
+      line-height: 1.4;
+      padding-top: 2px; // Точное выравнивание с чекбоксом
+    }
+  }
+
+  // ===== SMALL MOBILE STYLES (≤480px) =====
+  @media (max-width: 480px) {
+    margin-bottom: 25px;
+    gap: 6px;
+
+    .checkbox-dot {
+      width: 35px;
+      height: 35px;
+      border-width: 1.5px;
+    }
+
+    input:checked + .checkbox-dot {
+      border-width: 6px;
+    }
+
+    .checkbox-text {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+
+  // ===== EXTRA SMALL MOBILE STYLES (≤350px) =====
+  @media (max-width: 350px) {
+    margin-bottom: 20px;
+
+    .checkbox-dot {
+      width: 30px;
+      height: 30px;
+    }
+
+    input:checked + .checkbox-dot {
+      border-width: 5px;
+    }
+
+    .checkbox-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+}
+
+// Контейнер для группы чекбоксов (рекомендуется)
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    padding: 0 10px; // Добавляем отступы по бокам на мобильных
   }
 }
