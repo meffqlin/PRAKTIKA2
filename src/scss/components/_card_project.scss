@@ -1,0 +1,54 @@
+.project-card {
+  width: 671px;
+  height: 871px;
+  background: #FBFBFB;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: transform .35s ease, box-shadow .35s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 55px rgba(0,0,0,0.28);
+  }
+
+  &__picture {
+    width: 100%;
+    height: 409px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+  }
+
+  &:hover .project-card__image {
+    transform: scale(1.07);
+  }
+
+  &__body {
+    padding: 30px;
+  }
+
+  &__title {
+    font-family: "Nasalization";
+    font-size: 40px;
+    color: #1F2937;
+    margin-bottom: 15px;
+  }
+
+  &__info {
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #1F2937;
+  }
+}

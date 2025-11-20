@@ -13,6 +13,13 @@
 @use 'components/button';
 @use 'components/card';
 @use 'components/light_header';
+@use 'components/_btn2';
+@use 'components/_card_project';
+@use 'components/button-main';
+@use 'components/checkbox-option';
+@use 'components/input-field';
+@use "components/textarea-field";
+
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -179,6 +186,255 @@ body {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
+  }
+}
+.projects {
+  background: #B8132D;
+  width: 100%;
+  padding: 50px 100px;
+  box-sizing: border-box;
+
+  &__title {
+    font-family: "Nasalization";
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #FBFBFB;
+    text-align: center;
+    margin: 0 0 25px;
+  }
+
+  &__subtitle {
+    font-family: "Inter";
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    color: #FBFBFB;
+    margin: 0 0 50px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1279px) {
+  .projects {
+    padding: 40px 60px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects {
+    padding: 30px 20px;
+  }
+
+  .projects__title {
+    font-size: 42px;
+  }
+
+  .projects__subtitle {
+    font-size: 26px;
+  }
+
+  .project-card {
+    height: auto;
+  }
+
+  .btn--small, .btn--big {
+    width: 100%;
+  }
+}
+.trust {
+  padding: 50px 100px 0;
+  background: #FFFFFF;
+
+  &__title {
+    font-family: "Multiround Pro";
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    color: #B8132D;
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: -76px;
+    object-fit: cover;
+  }
+
+  /* 📌 Текст центрированный, но смещён ВПРАВО на 60px от головы */
+  &__text {
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #1F2937;
+    margin-top: -126px;
+    max-width: 1100px;
+
+    /* главное смещение */
+    margin-left: 239px
+  }
+
+  /* 📌 Автор стоит справа — от правой границы 100px */
+  &__author {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 40px;
+
+    /* держим 100px справа */
+    margin-right: 100px;
+  }
+
+  /* Полоска */
+  &__line {
+    width: 1429px;
+    border-bottom: 1px solid #E83F59;
+    margin-top: 50px;
+    margin-left: 150px;
+  }
+}
+
+/* 📱 Адаптив */
+@media (max-width: 1200px) {
+  .trust__line {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust {
+    padding: 40px 20px;
+  }
+
+  .trust__title {
+    font-size: 36px;
+  }
+
+  .trust__text {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .trust__img {
+    width: 120px;
+    height: 120px;
+    margin-top: -40px;
+  }
+
+  .trust__author {
+    font-size: 18px;
+  }
+}
+.consult {
+  width: 1920px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #FFF;
+
+  .consult__title {
+    font-family: Nasalization;
+    font-size: 70px;
+    color: #B8132D;
+    text-align: center;
+  }
+
+  .consult__subtitle {
+    margin-top: 50px;
+    font-family: Inter;
+    font-size: 45px;
+    text-align: center;
+    color: #B8132D;
+  }
+
+  &__content {
+    margin-top: 70px;
+    display: flex;
+    gap: 154px;
+    justify-content: center;
+  }
+
+  &__left {
+    width: 705px;
+  }
+
+  &__label {
+    margin-top: 40px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 600;
+    color: #B8132D;
+  }
+
+  &__right {
+    width: 705px;
+
+    .block__title {
+      font-family: Inter;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #B8132D;
+    }
+
+    .block {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+}
+
+/* ————————————— АДАПТИВ ————————————— */
+
+@media (max-width: 1600px) {
+  .consult {
+    transform: scale(.9);
+    transform-origin: top;
+  }
+}
+
+@media (max-width: 1400px) {
+  .consult {
+    transform: scale(.8);
+  }
+}
+
+@media (max-width: 1200px) {
+  .consult__content {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

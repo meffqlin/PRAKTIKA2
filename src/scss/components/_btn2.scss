@@ -1,0 +1,33 @@
+.btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 21px;
+  border: 4px solid #28316F;
+  color: #28316F;
+  background: #FFFFFF;
+  font-family: "Inter";
+  font-weight: 700;
+  transition: .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+}
+
+/* Маленькая кнопка в карточке */
+.btn--small {
+  width: 563px;
+  height: 91px;
+  font-size: 32px;
+  margin-top: 50px;
+}
+
+/* Большая кнопка снизу */
+.btn--big {
+  width: 851px;
+  height: 125px;
+  font-size: 40px;
+}

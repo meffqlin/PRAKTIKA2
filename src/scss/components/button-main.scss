@@ -1,0 +1,23 @@
+.button-main {
+  width: 642px;
+  height: 108px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  background: #E83F59;
+  color: white;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(232,63,89,0.22);
+    filter: brightness(1.02);
+  }
+
+  &:active { transform: translateY(-1px); }
+}

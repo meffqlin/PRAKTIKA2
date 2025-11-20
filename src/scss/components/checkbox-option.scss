@@ -1,0 +1,35 @@
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  input { display: none; }
+
+  .checkbox-dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: #B8132D 3px solid;
+    background: white;
+    transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
+    box-sizing: border-box;
+  }
+
+  input:checked + .checkbox-dot {
+    border: #B8132D 10px solid;
+    background: white;
+    box-shadow: 0 8px 24px rgba(232,63,89,0.22);
+    transform: scale(1.02);
+  }
+
+  .checkbox-text {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    line-height: 1;
+  }
+}
