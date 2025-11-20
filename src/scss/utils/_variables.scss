@@ -18,12 +18,3 @@ main {background: white}
   /**  Шрифты */
   --font-family-title: "Open Sans";
 }
-h1 { /* если у тебя на странице есть другие h1 — можно уменьшить глобальность, но для макета срочно покрываем */
-  margin: 50px 0 0;
-  font-family: "Nasalization", sans-serif;
-  font-weight: 400;
-  font-size: 70px;
-  line-height: 1; /* 100% */
-  color: #B8132D;
-  text-align: center;
-}
