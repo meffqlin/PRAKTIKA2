@@ -8,7 +8,9 @@
 
 // ==== 3. Layout ====
 @use 'layout/container';
-
+@use 'components/media.scss';
+@use 'components/details.scss';
+@use 'components/results.scss';
 @use 'components/contact-map.scss';
 @use 'components/phone-list.scss';
 @use 'components/social-icons.scss';
@@ -1019,3 +1021,16 @@ body {
     line-height: 130%;
   }
 }
+.breadcrumbs {
+  padding-left: 100px;
+  padding-top: 40px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #B8132D;
+}
+
+/* import component SCSS files (use actual relative paths in project) */
+
+
+/* footer spacing to match screenshot visual bottom spacing */
+.project-page { padding-bottom: 40px; }

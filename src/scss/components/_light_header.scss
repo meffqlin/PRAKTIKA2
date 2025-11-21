@@ -13,6 +13,7 @@ a {
   text-decoration: none;
   align-items: center;
   position: relative;
+  white-space: nowrap;
 
   .logo {
     margin-top: 10px;
@@ -47,7 +48,7 @@ a {
     display: flex;
     gap: 37px;
     margin-top: 0;
-    margin-left: 821px;
+    margin-left: 35%;
 
     .icon {
       cursor: pointer;
@@ -136,7 +137,6 @@ a {
     }
   }
 
-  // ===== MOBILE STYLES (≤767px) =====
   @media (max-width: 767px) {
     padding-left: 20px;
     padding-right: 20px;
@@ -214,7 +214,6 @@ a {
       }
     }
 
-    // Показываем меню при активации чекбокса
     #menu-toggle:checked ~ .navigation,
     #menu-toggle:checked ~ .icons {
       transform: translateY(0);
@@ -222,13 +221,11 @@ a {
       visibility: visible;
     }
 
-    // Запрещаем скролл body когда меню открыто
     #menu-toggle:checked ~ .navigation ~ .icons {
       transform: translateY(0);
     }
   }
 
-  // ===== SMALL MOBILE STYLES (≤480px) =====
   @media (max-width: 480px) {
     padding-left: 15px;
     padding-right: 15px;
@@ -245,7 +242,6 @@ a {
   }
 }
 
-// Дополнительные стили для предотвращения скролла при открытом меню
 body.menu-open {
   overflow: hidden;
 
@@ -258,7 +254,6 @@ body.menu-open {
       z-index: 1000;
     }
 
-    // Добавляем отступ для контента, равный высоте хедера
     &::after {
       content: '';
       display: block;

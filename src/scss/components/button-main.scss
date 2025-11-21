@@ -12,6 +12,7 @@
   cursor: pointer;
   transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
   will-change: transform;
+  box-sizing: border-box;
 
   &:hover {
     transform: translateY(-4px);
@@ -19,5 +20,39 @@
     filter: brightness(1.02);
   }
 
-  &:active { transform: translateY(-1px); }
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 1279px) {
+    width: 500px;
+    height: 90px;
+    font-size: 34px;
+    border-radius: 25px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 400px;
+    height: 75px;
+    font-size: 28px;
+    border-radius: 20px;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(232,63,89,0.22);
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 65px;
+    font-size: 24px;
+    max-width: 350px;
+  }
+
+  @media (max-width: 350px) {
+    height: 55px;
+    font-size: 20px;
+    max-width: 280px;
+  }
 }
