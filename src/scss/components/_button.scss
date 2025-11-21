@@ -32,7 +32,6 @@
     transform: translateY(0);
   }
 
-  // ===== TABLET STYLES (768–1279px) =====
   @media (max-width: 1279px) {
     width: 100%;
     max-width: 500px;
@@ -44,7 +43,6 @@
     }
   }
 
-  // ===== MOBILE STYLES (≤767px) =====
   @media (max-width: 767px) {
     width: 100%;
     max-width: 400px;
@@ -62,7 +60,6 @@
     }
   }
 
-  // ===== SMALL MOBILE STYLES (≤480px) =====
   @media (max-width: 480px) {
     height: 65px;
     max-width: 350px;
@@ -73,7 +70,6 @@
     }
   }
 
-  // ===== EXTRA SMALL MOBILE STYLES (≤350px) =====
   @media (max-width: 350px) {
     height: 55px;
     max-width: 280px;
@@ -81,13 +77,12 @@
 
     span {
       font-size: 20px;
-      white-space: normal; // Разрешаем перенос на очень маленьких экранах
+      white-space: normal;
       line-height: 1.1;
     }
   }
 }
 
-// Контейнер для кнопки (рекомендуется для центрирования)
 .btn-wrapper {
   display: flex;
   justify-content: center;

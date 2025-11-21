@@ -9,7 +9,9 @@
 // ==== 3. Layout ====
 @use 'layout/container';
 
-
+@use 'components/contact-map.scss';
+@use 'components/phone-list.scss';
+@use 'components/social-icons.scss';
 @use 'components/_principle-card.scss';
 @use 'components/_team-member.scss';
 @use 'components/button';
@@ -949,5 +951,71 @@ body {
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 0 20px;
+  }
+}
+.zapusk_title{
+  font-family: Nasalization;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  color: #B8132D;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  @media (max-width: 1279px) {
+    font-size: 56px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 42px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 110%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 36px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 120%;
+  }
+}
+
+.zapusk__text {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 40px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+
+  @media (max-width: 1279px) {
+    font-size: 28px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 35px;
+    line-height: 110%;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    line-height: 120%;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
+    line-height: 130%;
   }
 }

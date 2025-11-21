@@ -10,17 +10,17 @@
   font-family: "Inter";
   font-weight: 700;
   transition: .2s ease;
-  box-sizing: border-box; // Важно для правильного расчета размеров
+  box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap; // Предотвращает перенос текста
+  white-space: nowrap;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   }
 
-  // Общие адаптивные стили для всех кнопок
+
   @media (max-width: 1279px) {
     border-radius: 18px;
     border-width: 3px;
@@ -37,14 +37,12 @@
   }
 }
 
-/* Маленькая кнопка в карточке */
 .btn--small {
   width: 563px;
   height: 91px;
   font-size: 32px;
   margin-top: 50px;
 
-  // ===== TABLET STYLES (768–1279px) =====
   @media (max-width: 1279px) {
     width: 100%;
     max-width: 450px;
@@ -53,7 +51,6 @@
     margin-top: 40px;
   }
 
-  // ===== MOBILE STYLES (≤767px) =====
   @media (max-width: 767px) {
     width: 100%;
     max-width: 350px;
@@ -62,23 +59,20 @@
     margin-top: 30px;
   }
 
-  // ===== SMALL MOBILE STYLES (≤480px) =====
   @media (max-width: 480px) {
     height: 60px;
     font-size: 20px;
     margin-top: 25px;
-    white-space: normal; // Разрешаем перенос на очень маленьких экранах
+    white-space: normal;
     padding: 0 15px;
   }
 }
 
-/* Большая кнопка снизу */
 .btn--big {
   width: 851px;
   height: 125px;
   font-size: 40px;
 
-  // ===== TABLET STYLES (768–1279px) =====
   @media (max-width: 1279px) {
     width: 100%;
     max-width: 650px;
@@ -86,7 +80,6 @@
     font-size: 34px;
   }
 
-  // ===== MOBILE STYLES (≤767px) =====
   @media (max-width: 767px) {
     width: 100%;
     max-width: 500px;
@@ -94,7 +87,6 @@
     font-size: 28px;
   }
 
-  // ===== SMALL MOBILE STYLES (≤480px) =====
   @media (max-width: 480px) {
     height: 75px;
     font-size: 24px;
@@ -102,18 +94,16 @@
     padding: 0 20px;
   }
 
-  // ===== EXTRA SMALL MOBILE STYLES (≤350px) =====
   @media (max-width: 350px) {
     height: 65px;
     font-size: 20px;
     max-width: 300px;
     padding: 0 15px;
-    white-space: normal; // Разрешаем перенос на очень маленьких экранах
+    white-space: normal;
     line-height: 1.2;
   }
 }
 
-// Контейнер для кнопок (рекомендуется для центрирования и отступов)
 .btn-container {
   display: flex;
   justify-content: center;

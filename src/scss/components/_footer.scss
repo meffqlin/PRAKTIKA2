@@ -72,7 +72,6 @@
     }
   }
 
-  // ===== TABLET STYLES (768–1279px) =====
   @media (max-width: 1279px) {
     padding: 4px 60px;
 
@@ -112,7 +111,6 @@
     }
   }
 
-  // ===== MOBILE STYLES (≤767px) =====
   @media (max-width: 767px) {
     padding: 4px 20px;
 
@@ -148,7 +146,7 @@
     }
   }
 
-  // ===== SMALL MOBILE STYLES (≤480px) =====
+
   @media (max-width: 480px) {
     .footer__logo {
       width: 80px;
@@ -173,7 +171,6 @@
     }
   }
 
-  // ===== LARGE DESKTOP STYLES (≥1920px) =====
   @media (min-width: 1920px) {
     .footer__inner {
       max-width: 1720px;
@@ -183,7 +180,6 @@
   }
 }
 
-// Дополнительные гарантии от наложения текста
 @media (max-width: 350px) {
   .footer {
     .footer__slogan,
