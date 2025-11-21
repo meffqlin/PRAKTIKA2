@@ -1,0 +1,58 @@
+.principle-card {
+  width: 559px;
+  height: 233px;
+  background: #fff;
+  border-radius: 30px;
+  border: 4px solid #E83F59;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.26);
+  display: flex;
+  gap: 20px;
+  padding: 20px 30px;
+  align-items: flex-start;
+  transition: transform .28s ease, box-shadow .28s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 20px;
+  }
+
+  &__title {
+    font-family: "Nasalization", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+    margin-left: 10px;
+  }
+
+  &__text {
+    font-family: Inter;
+    font-size: 30px;
+    color: #1F2937;
+    margin-left: 13px;
+    margin-top: -2px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .principle-card { width: calc(100% - 60px); max-width: 720px; }
+}
+@media (max-width: 767px) {
+  .principle-card { width: 90%; padding: 16px; height: auto; }
+  .principle-card__title { font-size: 20px; }
+  .principle-card__text { font-size: 16px; margin-left: 12px; }
+  .principle-card__icon img { width: 80px; height: 80px; }
+}

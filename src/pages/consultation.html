@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+<header>
+    @@include("../components/_header_light.html")
+</header>
+<main>
+    <section class="consult">
+
+        <h1 class="consult__title">Мы всегда рядом и готовы помочь</h1>
+        <p class="consult__subtitle">
+            Оставьте заявку и получите бесплатную консультацию по продвижению вашего бизнеса.
+        </p>
+
+        <div class="consult__content">
+
+            <div class="consult__left">
+
+                @@include("./_input-field.html", {"placeholder": "Имя и фамилия"})
+                @@include("./_input-field.html", {"placeholder": "Телефон"})
+                @@include("./_input-field.html", {"placeholder": "E-mail"})
+                @@include("./_input-field.html", {"placeholder": "Название компании"})
+
+                <div class="consult__label">Дополнительная информация</div>
+
+                @@include("./textarea.html")
+            </div>
+
+            <div class="consult__right">
+
+                <div class="block">
+                    <div class="block__title">Мне нужна реклама для:</div>
+
+                    @@include("./checkbox-option.html", { "text": "Интернет-магазина" })
+                    @@include("./checkbox-option.html", { "text": "Офлайн-бизнеса" })
+                    @@include("./checkbox-option.html", { "text": "Услуг" })
+                    @@include("./checkbox-option.html", { "text": "Запуска нового продукта" })
+                </div>
+
+                <div class="block">
+                    <div class="block__title">Бюджет</div>
+
+                    @@include("./checkbox-option.html", { "text": "до 50 000₽" })
+                    @@include("./checkbox-option.html", { "text": "50 000₽–100 000₽" })
+                    @@include("./checkbox-option.html", { "text": "от 100 000₽" })
+                </div>
+
+                <div class="block">
+                </div>
+
+                @@include("./checkbox-option.html", { "text": "Я согласен на обработку персональных данных" })
+                @@include("./checkbox-option.html", { "text": "Я хочу получать полезные материалы о рекламе" })
+
+            </div>
+
+        </div>
+
+        <div class="consult__button">
+            @@include("./button-main.html", { "text": "Получить консультацию" })
+        </div>
+
+    </section>
+</main>
+<footer>
+    @@include("../components/_footer.html")
+</footer>
+</body>
+</html>

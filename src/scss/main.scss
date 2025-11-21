@@ -9,7 +9,9 @@
 // ==== 3. Layout ====
 @use 'layout/container';
 
-// ==== 4. Components ====
+
+@use 'components/_principle-card.scss';
+@use 'components/_team-member.scss';
 @use 'components/button';
 @use 'components/card';
 @use 'components/light_header';
@@ -714,5 +716,238 @@ body {
 
   @media (max-width: 767px) {
     height: auto;
+  }
+}
+
+/* about section layout and spacing */
+.about {
+  &__title {
+    margin-top: 50px;
+    font-family: "Nasalization", sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 1;
+    text-align: center;
+    color: #B8132D;
+  }
+
+  &__divider {
+    width: 1305px;
+    height: 0;
+    margin: 50px auto 0;
+    border-top: 2px solid #E83F59;
+  }
+
+  &__section-title {
+    margin-top: 50px;
+    font-family: "Nasalization", sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 1;
+    text-align: center;
+    color: #B8132D;
+  }
+
+  &__mission {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+    color: #1F2937;
+  }
+
+  &__story {
+    margin-top: 50px;
+    background: #B8132D;
+    padding: 40px 0;
+    color: #FFFFFF;
+    width: 100%;
+    min-height: 654px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-title {
+      font-family: "Nasalization", sans-serif;
+      font-size: 70px;
+      font-weight: 400;
+      color: #FFFFFF;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 1.6;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 0 100px;
+    }
+  }
+
+  &__principles {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.principles {
+  @extend .container;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 165px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeUp .6s ease both;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    padding: 0 60px;
+    max-width: 100%;
+  }
+
+  .about {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__divider {
+      width: 80%;
+    }
+
+    &__section-title {
+      font-size: 48px;
+    }
+
+    &__mission {
+      margin-left: 60px;
+      margin-right: 60px;
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    &__story {
+      min-height: 500px;
+
+      &-title {
+        font-size: 48px;
+      }
+
+      &-text {
+        font-size: 36px;
+        padding: 0 60px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .principles {
+    flex-direction: row;
+    gap: 16px;
+    padding: 0 40px;
+  }
+
+  .team {
+    gap: 60px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .about {
+    &__title {
+      font-size: 32px;
+      margin-top: 30px;
+    }
+
+    &__divider {
+      width: 90%;
+      margin: 30px auto 0;
+    }
+
+    &__section-title {
+      font-size: 28px;
+      margin-top: 30px;
+    }
+
+    &__mission {
+      font-size: 20px;
+      line-height: 32px;
+      text-align: center;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 15px;
+    }
+
+    &__story {
+      margin-top: 30px;
+      min-height: 400px;
+      padding: 30px 0;
+
+      &-title {
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      &-text {
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 0 20px;
+        text-align: center;
+      }
+    }
+
+    &__principles {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .principles {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .team {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 20px;
   }
 }
