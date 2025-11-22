@@ -40,7 +40,6 @@ body {
   background-color: var(--main-color);
 }
 
-// ===== HERO SPUTNIK SECTION =====
 .hero-sputnik {
   display: flex;
   justify-content: space-between;
@@ -95,7 +94,6 @@ body {
     color: black;
   }
 
-  // Tablet: 768–1279px
   @media (max-width: 1279px) {
     padding: 80px 60px;
     gap: 60px;
@@ -127,7 +125,7 @@ body {
     }
   }
 
-  // Mobile: ≤767px
+
   @media (max-width: 767px) {
     padding: 50px 20px;
     gap: 40px;
@@ -155,7 +153,7 @@ body {
   }
 }
 
-// ===== PHILOSOPHY SECTION =====
+
 .philosophy {
   background: #B8132D;
   width: 100%;
@@ -220,7 +218,6 @@ body {
     }
   }
 
-  // Tablet: 768–1279px
   @media (max-width: 1279px) {
     padding: 40px 60px;
 
@@ -254,7 +251,6 @@ body {
     }
   }
 
-  // Mobile: ≤767px
   @media (max-width: 767px) {
     padding: 30px 20px;
 
@@ -283,7 +279,6 @@ body {
   }
 }
 
-// ===== PRIORITIES SECTION =====
 .priorities {
   padding: 50px 100px;
   background: #fff;
@@ -306,7 +301,6 @@ body {
     flex-wrap: wrap;
   }
 
-  // Tablet: 768–1279px
   @media (max-width: 1279px) {
     padding: 40px 60px;
 
@@ -319,7 +313,6 @@ body {
     }
   }
 
-  // Mobile: ≤767px
   @media (max-width: 767px) {
     padding: 30px 20px;
 
@@ -336,7 +329,6 @@ body {
   }
 }
 
-// ===== PROJECTS SECTION =====
 .projects {
   background: #B8132D;
   width: 100%;
@@ -375,7 +367,6 @@ body {
     justify-content: center;
   }
 
-  // Tablet: 768–1279px
   @media (max-width: 1279px) {
     padding: 40px 60px;
 
@@ -392,7 +383,6 @@ body {
     }
   }
 
-  // Mobile: ≤767px
   @media (max-width: 767px) {
     padding: 30px 20px;
 
@@ -416,7 +406,6 @@ body {
   }
 }
 
-// ===== TRUST SECTION =====
 .trust {
   padding: 50px 100px 0;
   background: #FFFFFF;
@@ -474,7 +463,6 @@ body {
     margin-left: 150px;
   }
 
-  // Tablet: 768–1279px
   @media (max-width: 1279px) {
     padding: 40px 60px 0;
 
@@ -507,7 +495,6 @@ body {
     }
   }
 
-  // Mobile: ≤767px
   @media (max-width: 767px) {
     padding: 30px 20px 0;
 
@@ -551,7 +538,6 @@ body {
   }
 }
 
-// ===== CONSULT SECTION =====
 .consult {
   width: 100%;
   margin: 0 auto;
@@ -615,7 +601,6 @@ body {
     margin: 60px 0;
   }
 
-  // Tablet: 768–1279px
   @media (max-width: 1279px) {
     padding: 40px 60px;
 
@@ -654,7 +639,6 @@ body {
     }
   }
 
-  // Mobile: ≤767px
   @media (max-width: 767px) {
     padding: 30px 20px;
 
@@ -699,7 +683,6 @@ body {
   }
 }
 
-// Utility classes for buttons
 .btn {
   &--small, &--big {
     width: 100%;
@@ -711,7 +694,6 @@ body {
   }
 }
 
-// Project card adaptation
 .project-card {
   @media (max-width: 1279px) {
     width: 100%;
@@ -723,7 +705,6 @@ body {
   }
 }
 
-/* about section layout and spacing */
 .about {
   &__title {
     margin-top: 50px;
@@ -1028,9 +1009,4 @@ body {
   font-size: 14px;
   color: #B8132D;
 }
-
-/* import component SCSS files (use actual relative paths in project) */
-
-
-/* footer spacing to match screenshot visual bottom spacing */
 .project-page { padding-bottom: 40px; }

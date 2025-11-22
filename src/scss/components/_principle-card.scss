@@ -48,11 +48,14 @@
 }
 
 @media (max-width: 1279px) {
-  .principle-card { width: calc(100% - 60px); max-width: 720px; }
+  .principle-card {width: 380px; }
+  .principle-card__text { font-size: 20px; }
+  .principle-card__title { font-size: 25px; }
+  .principle-card__icon img { width: 60px; height: 60px; }
 }
 @media (max-width: 767px) {
   .principle-card { width: 90%; padding: 16px; height: auto; }
-  .principle-card__title { font-size: 20px; }
+  .principle-card__title { font-size: 20px; margin-left: 1px;}
   .principle-card__text { font-size: 16px; margin-left: 12px; }
   .principle-card__icon img { width: 80px; height: 80px; }
 }

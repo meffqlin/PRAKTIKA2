@@ -18,7 +18,7 @@
     background: white;
     transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
     box-sizing: border-box;
-    flex-shrink: 0; // Предотвращает сжатие чекбокса
+    flex-shrink: 0;
   }
 
   input:checked + .checkbox-dot {
@@ -33,11 +33,10 @@
     font-size: 24px;
     font-weight: 600;
     color: black;
-    line-height: 1.2; // Улучшенный line-height для лучшей читаемости
-    word-wrap: break-word; // Предотвращает выход текста за границы
+    line-height: 1.2;
+    word-wrap: break-word;
   }
 
-  // ===== TABLET STYLES (768–1279px) =====
   @media (max-width: 1279px) {
     margin-bottom: 40px;
     gap: 10px;
@@ -58,17 +57,16 @@
     }
   }
 
-  // ===== MOBILE STYLES (≤767px) =====
   @media (max-width: 767px) {
     margin-bottom: 30px;
     gap: 8px;
-    align-items: flex-start; // Выравнивание по верху для многострочного текста
+    align-items: flex-start;
 
     .checkbox-dot {
       width: 40px;
       height: 40px;
       border-width: 2px;
-      margin-top: 2px; // Компенсация для выравнивания с текстом
+      margin-top: 2px;
     }
 
     input:checked + .checkbox-dot {
@@ -79,11 +77,10 @@
     .checkbox-text {
       font-size: 20px;
       line-height: 1.4;
-      padding-top: 2px; // Точное выравнивание с чекбоксом
+      padding-top: 2px;
     }
   }
 
-  // ===== SMALL MOBILE STYLES (≤480px) =====
   @media (max-width: 480px) {
     margin-bottom: 25px;
     gap: 6px;
@@ -104,7 +101,6 @@
     }
   }
 
-  // ===== EXTRA SMALL MOBILE STYLES (≤350px) =====
   @media (max-width: 350px) {
     margin-bottom: 20px;
 
@@ -124,13 +120,12 @@
   }
 }
 
-// Контейнер для группы чекбоксов (рекомендуется)
 .checkbox-group {
   display: flex;
   flex-direction: column;
   width: 100%;
 
   @media (max-width: 767px) {
-    padding: 0 10px; // Добавляем отступы по бокам на мобильных
+    padding: 0 10px;
   }
 }
